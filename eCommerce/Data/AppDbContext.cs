@@ -21,14 +21,14 @@ namespace eCommerce.Data
             base.OnModelCreating(modelBuilder);
         }
 
-        public Actor Actors { get; set; }
+        public DbSet<Actor> Actors { get; set; }
 
-        public Movie Movies { get; set; }
+        public DbSet<Movie> Movies { get; set; }
 
-        public Producer Producer { get; set; }
+        public DbSet<Producer> Producers { get; set; }
 
-        public Actor_Movie Actor_Movie { get; set; }
+        public DbSet<Actor_Movie> Actors_Movies { get; set; }
 
-        public Cinema Cinemas { get; set; }
+        public DbSet<Cinema> Cinemas { get; set; }
     }
 }

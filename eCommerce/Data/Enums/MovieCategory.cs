@@ -5,6 +5,8 @@
         Action,
         Comedy,
         Drama,
-        Documentory
+        Documentary,
+        Cartoon,
+        Horror
     }
 }
