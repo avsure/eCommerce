@@ -1,4 +1,5 @@
 using eCommerce.Data;
+using eCommerce.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,9 @@ namespace eCommerce
         {
             //DbContext
             services.AddDbContext<AppDbContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+            //Service Configuration
+            services.AddScoped<IActorService, ActorService>();
 
             services.AddControllersWithViews();
         }
